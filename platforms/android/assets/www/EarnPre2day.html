@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+<head>
+    <!--
+    Customize this policy to fit your own app's needs. For more guidance, see:
+        https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+    Some notes:
+        * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+        * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+        * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+            * Enable inline JS: add 'unsafe-inline' to default-src
+    -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *"> -->
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta charset="utf-8">
+    <!-- Allow requests to stockwaveswatch.com -->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' http://stockwaveswatch.com">-->
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src *; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' 'unsafe-eval'" />-->
+    <allow-navigation href="*" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Stock Monitor</title>
+</head>
+<body>
+
+    <!--<script type="text/javascript">
+     var today = new Date();
+     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+     //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+     var dateTime = date ;
+
+     function GetNowTime() {
+         document.write(date);
+     }
+    </script>-->
+
+
+    <div class="topnav">
+
+        <a class="active" href="index.html">Home</a>
+
+        <div class="dropdown">
+            <a href="index.html">股票</a>
+            <div class="dropdown-content">
+                <a href="index.html">财报列表</a>
+                <a href="#">新股IPO</a>
+            </div>
+        </div>
+
+        <a href="Forex.html">汇率</a>
+        <a href="#contact">虚拟币</a>
+        <a href="#about">策略</a>
+        <a href="News.html">新闻</a>
+    </div>
+
+    <div style="padding-left:16px;align-content:center">
+        <h1>健盈投资，稳健保盈</h1>
+        <h1>美股财报</h1>
+        <p style=" align-content :center ">
+            <a href="EarnPre1day.html" class="previous">&laquo; Yesterday</a>
+            <a href="index.html" class="today">Today</a>
+            <a href="EarnAft1day.html" class="next">Tomorrow &raquo;</a>
+        </p>
+    </div>
+
+    <div class="app">
+
+        <div id="deviceready" class="blink">
+            <!--<p class="event listening">Connecting to DeXvice</p>
+            <p class="event received">Device is Ready</p>-->
+            <p id="test1"></p>
+        </div>
+    </div>
+    <div class="footer">
+        健盈科技.2019
+        <!--<p><span id="datetime"></span></p>
+        <script>
+            var dt = new Date();
+            document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+        </script>-->
+    </div>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+    <script src="js/fetch.js"></script>
+
+</body>
+</html>

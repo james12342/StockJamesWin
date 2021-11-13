@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta charset="utf-8">
+    <add name="Access-Control-Allow-Origin" value="*" />
+    <allow-navigation href="*" />
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Stock Monitor</title>
+</head>
+    <body>
+
+        <!--<script type="text/javascript">
+        var today = new Date();
+        var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        //var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+        var dateTime = date ;
+
+        function GetNowTime() {
+            document.write(date);
+        }
+       </script>-->
+       
+
+        <div class="topnav">
+
+            <a class="active" href="index.html">Home</a>
+
+            <div class="dropdown">
+                <a href="index.html">股票</a>
+                <div class="dropdown-content">                   
+                    <a href="index.html">财报列表</a>
+                    <a href="#">新股IPO</a>
+                </div>
+            </div>
+
+            <a href="Forex.html">汇率</a>
+            <a href="#contact">虚拟币</a>
+            <a href="#about">策略</a>
+            <a href="News.html">新闻</a>
+        </div>
+
+        <div style="padding-left:16px;align-content:center">
+            <h1>健盈投资，稳健保盈</h1>
+            <h1>美股财报</h1>
+            <p style=" align-content :center ">
+                <a href="EarnPre1day.html" class="next">昨天</a>
+                <a href="index.html" class="today">今天</a>
+                <a href="EarnAft1day.html" class="next">明天</a>
+                <a href="Past3DaysGoodEarn.html" class="next">前三天</a>
+                <a href="TopStocks.html" class="next">最受欢迎</a>
+            </p>
+        </div>
+
+        <div class="app">
+
+            <div id="deviceready" class="blink">
+                <!--<p class="event listening">Connecting to DeXvice</p>
+            <p class="event received">Device is Ready</p>-->
+                <p id="test1"></p>
+            </div>
+        </div>
+        <div class="footer">
+            健盈科技.2019
+            <!--<p><span id="datetime"></span></p>
+            <script>
+                var dt = new Date();
+                document.getElementById("datetime").innerHTML = dt.toLocaleDateString();
+            </script>-->
+        </div>
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script  src="js/fetch.js"></script>
+
+    </body>
+</html>

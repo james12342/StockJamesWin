@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+
+    <!--<script src="js/GetEarningCalendars.js"></script>-->
+    <title>Stock Monitor</title>
+</head>
+<script>
+    $.ajax({
+        $("button").click(function () {
+            $("div").load('http://www.rightline.net/calendar/index.html');
+        });
+    });
+</script>
+<!--<script type="text/JavaScript">
+    function httpGet(theUrl) {
+        var xmlHttp = null;
+
+        xmlHttp = new XMLHttpRequest();
+        xmlHttp.open("GET", theUrl, false);
+        xmlHttp.send(null);
+        return xmlHttp.responseText;
+    }
+    document.write(httpGet("http://www.rightline.net/calendar/index.html"));
+</script>-->
+<body>
+
+    
+    <div id="feeds">
+</body>
+</html>
